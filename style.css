@@ -1,0 +1,85 @@
+p[class = "main_heading"]
+{
+  font-size: 50px;
+  text-align: center;
+  color: #BE0032;
+  align-self: right;
+}
+p[class = "main_heading_sub"]
+{
+  font-size: 30px;
+  text-align: center;
+  color: #BE0032;
+  align-self: right;
+}
+p[class = "service_style_heading"]
+{
+  font-size: 30px;
+  color: #BE0032;
+  align-self: right;
+}
+p[class = "service_style_body"]
+{
+  font-size: 20px;
+  color: #6699CC;
+}
+ul[class = "service_style_ul_level_1"]
+{
+  font-size: 20px;
+  color: #6699CC;
+  list-style-type: "\2020";
+}
+ul[class = "service_style_ul_level_2"]
+{
+  font-size: 15px;
+  color: black;
+  list-style-type: "\2021";
+}
+ul[class = "service_style_ul_level_2"] li
+{
+  margin: 0 0 10px 0;
+}
+ul[class = "main_nav_bar"]
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6699CC;
+}
+ul[class = "main_nav_bar"] li
+{
+  float: left;
+}
+ul[class = "main_nav_bar"] li[class = "main_nav_bar_li"] a
+{
+  display: block;
+  color: #BE0032;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul[class = "main_nav_bar"] li[class = "main_nav_bar_li"] a:hover
+{
+  background-color: #334CE6;
+}
+ul[class = "main_nav_bar"] li[class = "main_nav_bar_li"] a[class = "main_nav_bar_li_a"], a[class_style = "drop_button"]
+{
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul[class = "main_nav_bar"] li[class = "main_nav_bar_li"] div[class = "main_nav_bar_li_dropdown"]
+{
+  display: none;
+  position: absolute;
+  background-color: #6699CC;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+ul[class = "main_nav_bar"] li[class_style = "dropdown"]:hover div[class = "main_nav_bar_li_dropdown"]
+{
+  display: block;
+}
+

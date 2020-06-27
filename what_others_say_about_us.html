@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Crux Mathematics: What Others Say about Us</title>
+  </head>
+  <body>
+    <div id = "navigation_bar"></div>
+    <script> $(function(){$("#navigation_bar").load("navigation_bar.html");});</script>
+    <p class = "service_style_heading">We at Crux Mathematics are proud of our long history of excellence in teaching. Please see some samples of comments from our students below.</p>
+    <ul class = "service_style_ul_level_1">
+      <li>Matthew Creek
+        <ul class = "service_style_ul_level_2">
+	  <li>
+            <div class = "slideshow" style = "height: 50px">
+              <div class = "slide_mcreek">"Professor Creek is not only an outstanding teacher, he is the most thorough and well spoken professor I think I've ever had the pleasure of learning under. His examples were always helpful, and he is able to sense the class's understanding or lack thereof. In summary Professor Creek's teaching ability was absolutely excellent."</div>
+              <div class = "slide_mcreek">"You are the best professor ever. You are so nice and passionate. I will always remember this class and you as one of the nicest and most positive people. Thank you for making math so enjoyable."</div>
+              <div class = "slide_mcreek">"He is by far the best math professor I've had at this university. He took the time to explain things and break things down so that something that looked complicated turned into a simple 4 step process. He also had a good sense of humor and spoke very clearly, which was a problem I've had with other math professors."</div>
+              <div class = "slide_mcreek">"Above all, Creek is a fantastic human being and is one of the nicest, most caring people I have ever met. He clearly cares a lot about his students and his class being useful. Creek is a very clear lecturer, a product of what seems to be a lot of effort put into each class. He is able to make lengthy proofs manageable and provide plenty of examples/applications, which serve to show how the theorems are relevant/useful and provide useful exposure to potential exam and homework problems."</div>
+              <div class = "slide_mcreek">"He is a very friendly and highly approachable Professor. He is probably one of the nicest people I have met the college. He is also a phenomenal instructor, keeping the lectures interesting (and funny) and is extremely understanding. He allows students to come to his office whenever they are free and is receptive to any question one might ask. He works very hard for his students and really wants them to do well."</div>
+              <div class = "slide_mcreek">"Creek is a very clear lecturer who has the unique ability of being able to explain his proofs effectively as he goes along. While in math classes it is somewhat the norm to not necessarily "get" a proof when first writing it down from lecture, Creek's proofs are normally understandable in class. As well, he answers questions very well, perhaps the best I've ever observed in an instructor. Creek has been my favorite math instructor here (and I even had Fefferman!). His jokes are also precious, and he is an exceedingly kind person."</div>
+              <div class = "slide_mcreek">"Very friendly and an amazing lecturer. Very approachable, and definitely keeps one's attention in class. His office hours are awesome, he will always answer whatever question you have even if it might seem obvious."</div>
+              <div class = "slide_mcreek">"I knew absolutely nothing about calculus but Prof Creek took the time to explain every concept in depth and perform practice problems during class time if need be. Best math teacher I've ever had."</div>
+	  </li>
+        </ul>
+      </li>
+      <li>Dan-Andrei Geba
+        <ul class = "service_style_ul_level_2">
+	  <li>
+            <div class = "slideshow" style = "height: 50px">
+              <div class = "slide_dgeba">"Comment #1..."</div>
+              <div class = "slide_dgeba">"Comment #2..."</div>
+              <div class = "slide_dgeba">"Comment #3..."</div>
+              <div class = "slide_dgeba">"Comment #4..."</div>
+              <div class = "slide_dgeba">"Comment #5..."</div>
+              <div class = "slide_dgeba">"Comment #6..."</div>
+              <div class = "slide_dgeba">"Comment #7..."</div>
+              <div class = "slide_dgeba">"Comment #8..."</div>
+	  </li>
+        </ul>
+      </li>
+      <li>Alex Iosevich
+        <ul class = "service_style_ul_level_2">
+	  <li>
+            <div class = "slideshow" style = "height: 50px">
+              <div class = "slide_aiosevich">"Comment #1..."</div>
+              <div class = "slide_aiosevich">"Comment #2..."</div>
+              <div class = "slide_aiosevich">"Comment #3..."</div>
+              <div class = "slide_aiosevich">"Comment #4..."</div>
+              <div class = "slide_aiosevich">"Comment #5..."</div>
+              <div class = "slide_aiosevich">"Comment #6..."</div>
+              <div class = "slide_aiosevich">"Comment #7..."</div>
+              <div class = "slide_aiosevich">"Comment #8..."</div>
+	  </li>
+        </ul>
+      </li>
+
+    </ul>
+    <script>
+      var slideIndex = 0;
+      carousel(Math.floor(Math.random()) * 3, Math.floor(Math.random()) * 3, Math.floor(Math.random()) * 3);
+
+      function carousel(mcsi, dgsi, aisi)
+      {
+        var i;
+        var mc = document.getElementsByClassName("slide_mcreek");
+        var dg = document.getElementsByClassName("slide_dgeba");
+        var ai = document.getElementsByClassName("slide_aiosevich");
+        var choice;
+
+        choice = Math.floor(Math.random() * 3)
+        if (choice == 0)
+        {
+          mc_slideIndex = Math.floor(Math.random() * mc.length)
+          dg_slideIndex = dgsi
+          ai_slideIndex = aisi
+        }
+        else if (choice == 1)
+        {
+          mc_slideIndex = mcsi
+          dg_slideIndex = Math.floor(Math.random() * dg.length)
+          ai_slideIndex = aisi
+        }
+        else
+        {
+          mc_slideIndex = mcsi
+          dg_slideIndex = dgsi
+          ai_slideIndex = Math.floor(Math.random() * ai.length)
+        }
+
+        for (i = 0; i < mc.length; i++)
+        {
+          if (i != mc_slideIndex)
+          {
+            mc[i].style.display = "none";
+          }
+          else
+          {
+            mc[i].style.display = "inline";
+          }
+          if (i != dg_slideIndex)
+          {
+            dg[i].style.display = "none";
+          }
+          else
+          {
+            dg[i].style.display = "inline";
+          }
+          if (i != ai_slideIndex)
+          {
+            ai[i].style.display = "none";
+          }
+          else
+          {
+            ai[i].style.display = "inline";
+          }
+        }
+
+        setTimeout(carousel, 10000, mc_slideIndex, dg_slideIndex, ai_slideIndex); 
+      }
+    </script>
+  </body>
+</html>

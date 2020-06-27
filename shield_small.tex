@@ -1,0 +1,41 @@
+\documentclass[tikz,convert={density=1200,outext=.png}]{standalone}
+
+\usepackage{amsmath,amssymb,relsize}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\pgfplotsset{compat = newest, ticks = none}
+\usepgfplotslibrary{fillbetween}
+
+\providecommand{\lparen}{}
+\providecommand{\rparen}{}
+\providecommand{\paren}{}
+\renewcommand{\lparen}{\left(}
+\renewcommand{\rparen}{\right)}
+\renewcommand{\paren}[1]{\lparen#1\rparen}
+
+\definecolor{bluegray}{rgb}{0.4, 0.6, 0.8}
+\definecolor{crimsonglory}{rgb}{0.75, 0.0, 0.2}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\begin{axis}[domain = -1:1, no marks, axis equal image, axis line style = {draw = none}]
+		\draw[bluegray] (0, 0) -- (0, 31 / 16);
+		\addplot[name path = lb, black, smooth, thick, domain = -1:0, samples = 500] {-(x-1/4)^3 - 1/64)};
+		\addplot[name path = lt, black, smooth, thick, domain = -1:0, samples = 500] {(1/2 * x * (x + 1) + 31 / 16)};
+		\addplot[bluegray] fill between[of = lb and lt];
+		\addplot[name path = ub, black, smooth, thick, domain = 0:1, samples = 500] {(x+1/4)^3 - 1/64)};
+		\addplot[name path = ut, black, smooth, thick, domain = 0:1, samples = 500] {(1/2 * x * (x - 1) + 31 / 16)};
+		\addplot[bluegray] fill between[of = ub and ut];
+		\draw[thick] (-1 / 10, 109 / 4000) -- (-1 / 10, 757 / 400);
+		\draw[thick] (1 / 10, 109 / 4000) -- (1 / 10, 757 / 400);
+		\draw[thick] (-0.81572, 1147 / 960) -- (0.81572, 1147 / 960);
+		\draw[thick] (-0.86980, 1333 / 960) -- (0.86980, 1333 / 960);
+		\node[crimsonglory] at (-0.45786, 31 / 24) {\scalebox{3}{\(\mathlarger{\mathlarger{\mathlarger{\mathlarger{\mathfrak{C}}}}}\)}};
+		\node[crimsonglory] at (0.45786, 31 / 24) {\scalebox{3}{\(\mathlarger{\mathlarger{\mathlarger{\mathlarger{\mathfrak{M}}}}}\)}};
+		\node[yellow] at (0, 31 / 24) {\(\square\)};
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}
+
