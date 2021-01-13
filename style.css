@@ -12,6 +12,13 @@ p[class = "main_heading_sub"]
   color: #BE0032;
   align-self: right;
 }
+td[class = "main_table"]
+{
+  font-size: 30px;
+  text-align: center;
+  color: #BE0032;
+  align-self: right;
+}
 p[class = "service_style_heading"]
 {
   font-size: 30px;
